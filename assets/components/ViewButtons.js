@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import { StyleSheet, Text, View,TouchableOpacity, } from 'react-native'
 
-const ViewButtons = ({ changeView,changeView1, setActivebtn, activebtn}) => {
-    // const [activebtn, setActivebtn] = useState(false)
+const ViewButtons = ({ changeView,changeView1, activebtn}) => {
+    
     return (
         <View style={styles.btncontainer}>
             

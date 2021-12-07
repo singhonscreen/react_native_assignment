@@ -5,14 +5,15 @@ import ViewButtons from './ViewButtons';
 import SavedCard from './SavedCard';
 
 const MapView1 = ({navigation}) => {
-    const [activebtn, setActivebtn] = useState(false)
+    const [activebtn, setActivebtn] = useState(true)
     const changeView = ()=>{
         navigation.navigate('MapView1')
         setActivebtn(true)
     }
+     
     const changeView1 = ()=>{
-        navigation.navigate('ListItems')
         setActivebtn(false)
+        navigation.navigate('ListItems')
     }
     return (
         <View style={styles.container}>
@@ -20,7 +21,7 @@ const MapView1 = ({navigation}) => {
         <MapView style={styles.map} />
         </View>
         <View style={styles.viewBtn}>
-        <ViewButtons activebtn={activebtn} setActivebtn={setActivebtn} changeView={changeView} changeView1={changeView1}/>
+        <ViewButtons activebtn={activebtn}  changeView={changeView} changeView1={changeView1}/>
         <View style={{position:"relative",top:500}}>
         <SavedCard />
         </View>
